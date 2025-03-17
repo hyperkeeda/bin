@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeProperties - Your Trusted Property Partner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Premium Property Deals</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Dream Property</h1>
+                <p>Let us help you discover the perfect home or investment opportunity</p>
+                <div class="hero-buttons">
+                    <a href="properties.html" class="btn btn-primary">Browse Properties</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-bar">
+        <div class="container">
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="property-type">Type</label>
+                    <select id="property-type">
+                        <option value="all">All Types</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="villa">Villa</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Any Location">
+                </div>
+                <div class="form-group">
+                    <label for="price-range">Price Range</label>
+                    <select id="price-range">
+                        <option value="all">Any Price</option>
+                        <option value="0-500000">$0 - $500,000</option>
+                        <option value="500000-1000000">$500,000 - $1,000,000</option>
+                        <option value="1000000-2000000">$1,000,000 - $2,000,000</option>
+                        <option value="2000000+">$2,000,000+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bedrooms">Bedrooms</label>
+                    <select id="bedrooms">
+                        <option value="any">Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-search">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="featured-properties">
+        <div class="container">
+            <h2 class="section-title">Featured Properties</h2>
+            <div class="property-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property1.jpg" alt="Luxury Apartment">
+                        <span class="property-tag">For Sale</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>Luxury Apartment in City Center</h3>
+                        <p class="property-price">$850,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Downtown, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 1,500 sq ft</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property2.jpg" alt="Modern Villa">
+                        <span class="property-tag">For Sale</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>Modern Villa with Pool</h3>
+                        <p class="property-price">$1,950,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Hillside, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 3,200 sq ft</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property3.jpg" alt="Commercial Space">
+                        <span class="property-tag">For Rent</span>
+                    </div>
+                    <div class="property-details">
+                        <h3>Prime Commercial Space</h3>
+                        <p class="property-price">$12,000/month</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Business District, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-door-open"></i> 5 Rooms</span>
+                            <span><i class="fas fa-toilet"></i> 2 Toilets</span>
+                            <span><i class="fas fa-vector-square"></i> 2,000 sq ft</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="properties.html" class="btn btn-secondary">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-preview bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Sales</h3>
+                    <p>We help you sell your property at the best market price with our expertise and extensive network.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Property Purchase</h3>
+                    <p>Find your dream property with our personalized search service tailored to your requirements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investment Advisory</h3>
+                    <p>Get expert advice on property investments to maximize your returns and build wealth.</p>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="services.html" class="btn btn-secondary">Explore All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-preview">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"PrimeProperties helped me find my dream home in just two weeks. Their team was professional and understood exactly what I was looking for."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client1.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As a first-time investor, I was nervous about property investment. The team at PrimeProperties guided me through the entire process and helped me make a profitable investment."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client2.jpg" alt="Michael Chen">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Property Investor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="view-all">
+                <a href="testimonials.html" class="btn btn-secondary">Read More Testimonials</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Property?</h2>
+                <p>Contact our expert team today for a personalized consultation</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo footer-logo">
+                        <h2>Prime<span>Properties</span></h2>
+                    </div>
+                    <p>Your trusted partner in finding the perfect property solution for your needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#sales">Property Sales</a></li>
+                        <li><a href="services.html#purchase">Property Purchase</a></li>
+                        <li><a href="services.html#investment">Investment Advisory</a></li>
+                        <li><a href="services.html#valuation">Property Valuation</a></li>
+                        <li><a href="services.html#management">Property Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Metro City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@primeproperties.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrimeProperties. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

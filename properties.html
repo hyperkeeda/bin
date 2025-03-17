@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - PrimeProperties</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Premium Property Deals</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html" class="active">Properties</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Properties</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Properties</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="properties-filter">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="filter-toggle">
+                    <span>Filter Properties</span>
+                    <i class="fas fa-filter"></i>
+                </div>
+                <form class="filter-form">
+                    <div class="filter-row">
+                        <div class="filter-col">
+                            <label for="filter-type">Property Type</label>
+                            <select id="filter-type">
+                                <option value="all">All Types</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="house">House</option>
+                                <option value="villa">Villa</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="land">Land</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-status">Status</label>
+                            <select id="filter-status">
+                                <option value="all">All Status</option>
+                                <option value="for-sale">For Sale</option>
+                                <option value="for-rent">For Rent</option>
+                                <option value="sold">Sold</option>
+                                <option value="new-launch">New Launch</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-location">Location</label>
+                            <select id="filter-location">
+                                <option value="all">All Locations</option>
+                                <option value="downtown">Downtown</option>
+                                <option value="suburban">Suburban Area</option>
+                                <option value="beach">Beach Front</option>
+                                <option value="hillside">Hillside</option>
+                                <option value="business">Business District</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-bedrooms">Bedrooms</label>
+                            <select id="filter-bedrooms">
+                                <option value="any">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-col">
+                            <label for="filter-bathrooms">Bathrooms</label>
+                            <select id="filter-bathrooms">
+                                <option value="any">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+                        <div class="filter-col">
+                            <label>Price Range</label>
+                            <div class="price-range">
+                                <input type="text" id="min-price" placeholder="Min Price">
+                                <span>to</span>
+                                <input type="text" id="max-price" placeholder="Max Price">
+                            </div>
+                        </div>
+                        <div class="filter-col">
+                            <label for="filter-area">Area (sq ft)</label>
+                            <div class="area-range">
+                                <input type="text" id="min-area" placeholder="Min Area">
+                                <span>to</span>
+                                <input type="text" id="max-area" placeholder="Max Area">
+                            </div>
+                        </div>
+                        <div class="filter-col filter-buttons">
+                            <button type="submit" class="btn btn-primary">Apply Filters</button>
+                            <button type="reset" class="btn btn-outline">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="view-options">
+                <div class="sort-by">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort">
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+                <div class="view-type">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th-large"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="properties-listing">
+        <div class="container">
+            <div class="property-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property1.jpg" alt="Luxury Apartment">
+                        <span class="property-tag">For Sale</span>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Luxury Apartment in City Center</h3>
+                        <p class="property-price">$850,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Downtown, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 1,500 sq ft</span>
+                        </div>
+                        <p class="property-description">Modern luxury apartment featuring open floor plan, gourmet kitchen, floor-to-ceiling windows with stunning city views, and high-end finishes throughout.</p>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property2.jpg" alt="Modern Villa">
+                        <span class="property-tag">For Sale</span>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Modern Villa with Pool</h3>
+                        <p class="property-price">$1,950,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Hillside, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 3,200 sq ft</span>
+                        </div>
+                        <p class="property-description">Stunning contemporary villa with private pool, landscaped gardens, home theater, smart home features, and panoramic views of the city and mountains.</p>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property3.jpg" alt="Commercial Space">
+                        <span class="property-tag">For Rent</span>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Prime Commercial Space</h3>
+                        <p class="property-price">$12,000/month</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Business District, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-door-open"></i> 5 Rooms</span>
+                            <span><i class="fas fa-toilet"></i> 2 Toilets</span>
+                            <span><i class="fas fa-vector-square"></i> 2,000 sq ft</span>
+                        </div>
+                        <p class="property-description">Prime office space in prestigious business district. Features modern amenities, floor-to-ceiling windows, conference room, reception area, and secure parking.</p>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property4.jpg" alt="Family Home">
+                        <span class="property-tag">For Sale</span>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Spacious Family Home</h3>
+                        <p class="property-price">$720,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Suburban Area, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 2,400 sq ft</span>
+                        </div>
+                        <p class="property-description">Beautiful family home in quiet neighborhood. Features spacious bedrooms, updated kitchen, large backyard, two-car garage, and close proximity to schools and parks.</p>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property5.jpg" alt="Beach Apartment">
+                        <span class="property-tag">For Sale</span>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Beachfront Luxury Apartment</h3>
+                        <p class="property-price">$1,250,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Beach Front, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 1,800 sq ft</span>
+                        </div>
+                        <p class="property-description">Stunning beachfront apartment with unobstructed ocean views. Features private balcony, gourmet kitchen, marble bathrooms, and access to building amenities.</p>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/property6.jpg" alt="Investment Land">
+                        <span class="property-tag">For Sale</span>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Development Land with Potential</h3>
+                        <p class="property-price">$550,000</p>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Growing District, Metro City</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 5,000 sq ft</span>
+                            <span><i class="fas fa-map"></i> Zoned Commercial</span>
+                            <span><i class="fas fa-road"></i> Road Access</span>
+                        </div>
+                        <p class="property-description">Prime development land in rapidly growing area. Zoned for commercial or mixed-use development with all utilities available. Great investment opportunity.</p>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Can't Find What You're Looking For?</h2>
+                <p>Contact our agents for personalized property recommendations</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo footer-logo">
+                        <h2>Prime<span>Properties</span></h2>
+                    </div>
+                    <p>Your trusted partner in finding the perfect property solution for your needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#sales">Property Sales</a></li>
+                        <li><a href="services.html#purchase">Property Purchase</a></li>
+                        <li><a href="services.html#investment">Investment Advisory</a></li>
+                        <li><a href="services.html#valuation">Property Valuation</a></li>
+                        <li><a href="services.html#management">Property Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Metro City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@primeproperties.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrimeProperties. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

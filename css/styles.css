@@ -1,0 +1,368 @@
+/* Global Reset & Variables */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --accent-color: #3498db;
+  --light-bg: #f7f7f7;
+  --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--primary-color);
+  background: #fff;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Header & Navigation */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav-links,
+.main-menu {
+  list-style: none;
+  display: flex;
+}
+.nav-links li,
+.main-menu li {
+  margin-left: 30px;
+}
+.nav-links li a,
+.main-menu li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover,
+.main-menu li a:hover,
+.nav-links li a.active,
+.main-menu li a.active {
+  color: var(--accent-color);
+}
+
+/* Hamburger (Mobile Menu) */
+.hamburger,
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span,
+.mobile-menu .bar {
+  height: 3px;
+  width: 25px;
+  background: var(--primary-color);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Page Banner & Hero */
+.page-banner,
+.page-header,
+.hero {
+  background: var(--accent-color);
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.hero-buttons a {
+  margin: 0 10px;
+}
+
+/* Search Bar */
+.search-bar {
+  background: var(--light-bg);
+  padding: 20px 0;
+}
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+.search-form .form-group {
+  flex: 1;
+  min-width: 150px;
+}
+.search-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.search-form input,
+.search-form select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn-primary {
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover {
+  background: darkred;
+}
+.btn-secondary {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+}
+.btn-secondary:hover {
+  background: #2980b9;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+/* Grids */
+.services-grid,
+.property-grid,
+.team-grid,
+.testimonial-cards,
+.video-grid,
+.partners-grid,
+.services-grid {
+  display: grid;
+  gap: 20px;
+}
+.property-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.testimonial-cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.partners-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Cards & Details */
+.property-card,
+.service-card,
+.testimonial-card,
+.team-member {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.property-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.property-image img,
+.team-member img,
+.partner img,
+.about-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Testimonial Slider */
+.testimonial-slider,
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+}
+.testimonial-slide {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.testimonial-slide.active {
+  display: block;
+}
+.carousel-controls,
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.carousel-controls button,
+.testimonial-controls button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0 10px;
+}
+
+/* FAQ Accordion (for Contact Page) */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Forms */
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+form .form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+form .form-group {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 40px 0;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  /* Stack header items */
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links,
+  .main-menu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  .nav-links.active,
+  .main-menu.active {
+    display: flex;
+  }
+  .nav-links li,
+  .main-menu li {
+    margin: 10px 0;
+  }
+  /* Show Hamburger */
+  .hamburger,
+  .mobile-menu {
+    display: flex;
+  }
+  /* Adjust grid layouts */
+  .property-grid,
+  .services-grid,
+  .team-grid,
+  .testimonial-cards,
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Simple Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
